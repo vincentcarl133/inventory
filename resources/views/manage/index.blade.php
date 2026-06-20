@@ -45,12 +45,12 @@
                                     <td class="d-flex">
                                         <form action="{{ route('manage.approve', $item->id) }}" method="POST" class="me-2">
                                             @csrf
-                                            <button type="submit" class="btn btn-sm btn-success">APPROVE</button>
+                                            <button type="submit" class="btn btn-sm btn-success">Approve</button>
                                         </form>
                                                                                 
                                         <form id="disapproveForm{{ $item->id }}" action="{{ route('manage.disapprove', $item->id) }}" method="POST">
                                             @csrf
-                                            <button type="button" class="btn btn-sm btn-danger" onclick="confirmDisapprove({{ $item->id }})">DISAPPROVE</button>
+                                            <button type="button" class="btn btn-sm btn-danger" onclick="confirmDisapprove({{ $item->id }})">Reject</button>
                                         </form>
                                         
                                     </td>

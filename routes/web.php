@@ -6,10 +6,11 @@ use App\Http\Controllers\InventoryController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ManageOrderController;
 use App\Http\Controllers\ShipmentController;
+use App\Http\Controllers\DashboardController;
 
-Route::get('/', function () {
-    return view('dashboard/dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/dashboard', [DashboardController::class, 'dashboard'])
+    ->middleware(['auth', 'verified'])
+    ->name('dashboard');
 
 
 Route::middleware('auth')->group(function () {
